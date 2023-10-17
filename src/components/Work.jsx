@@ -21,7 +21,7 @@ const Work = () => {
 {/* container for projects */}
 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           
-          {/* Gird Item */}
+          {/* Grid Item */}
           {project.map((item, index) => (
   <div
     key={index}
