@@ -1,3 +1,5 @@
+
+import React, { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -6,10 +8,24 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 
 
-function App() {
+const App = () => {
+
+  const [darkMode, setDarkMode] = useState(false);
+  
+
+  
+  const toggleTheme = () => {
+    setDarkMode((prev) => !prev);
+  };
   return (
     <div>
-      <Navbar />
+      <Navbar 
+        darkMode={darkMode}
+        toggleTheme={toggleTheme}
+      />
+      
+      
+      
       <Home />
       <About />
       <Skills />
